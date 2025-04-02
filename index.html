@@ -156,5 +156,18 @@
 
     <script src="assets/index.js"></script>
     <script src="assets/manifest.js"></script>
+    <script>
+        document.querySelector('.go').addEventListener('click', function() {
+            window.location.href = 'login.html';
+        });
+
+        // Redirect to home.html after login.html is completed
+        if (window.location.pathname.endsWith('login.html')) {
+            // Simulate completion logic here
+            setTimeout(function() {
+                window.location.href = 'home.html';
+            }, 1000); // Adjust delay as needed
+        }
+    </script>
 </body>
 </html>
